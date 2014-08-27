@@ -21,6 +21,7 @@
     chartOuterPadding: '=',
     chartRadius: '=',
     chartFps: '=',
+    chartFormat: '=',
     chartWindowSize: '=',
     chartHistorySize: '=',
     chartQueueSize: '=',
