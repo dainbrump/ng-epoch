@@ -20,6 +20,7 @@
   "dependencies": {
     "d3": "3.4.11",
     "epoch": "0.6.0",
-    "angular": "~1.2.23"
+    "angular": "~1.2.23",
+    "jquery": "~2.1.1"
   }
 }
