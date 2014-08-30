@@ -20,24 +20,24 @@ nge.config(['$stateProvider', '$urlRouterProvider',
     $urlRouterProvider.otherwise('/');
     $stateProvider
       .state('/', {
-        url: '/ng-epoch/',
+        url: '/',
         controller:'HomeCtrl',
-        templateUrl:'/ng-epoch/js/app/views/home.html'
+        templateUrl:'/js/app/views/home.html'
       })
       .state('get-started', {
-        url: '/ng-epoch/get-started',
+        url: '/get-started',
         controller:'GetStartedCtrl',
-        templateUrl:'/ng-epoch/js/app/views/get-started.html'
+        templateUrl:'/js/app/views/get-started.html'
       })
       .state('examples', {
-        url: '/ng-epoch/examples',
+        url: '/examples',
         controller:'ExamplesCtrl',
-        templateUrl:'/ng-epoch/js/app/views/examples.html'
+        templateUrl:'/js/app/views/examples.html'
       })
       .state('options', {
-        url: '/ng-epoch/options',
+        url: '/options',
         controller:'OptionsCtrl',
-        templateUrl:'/ng-epoch/js/app/views/options.html'
+        templateUrl:'/js/app/views/options.html'
       });
   }
 ]);
@@ -51,10 +51,10 @@ nge.controller('PageCtrl', ['$scope', 'config',
     $scope.navbar = {
       collapse: true,
       menu: [
-        {'label': 'Home',        'id': 'home',       'href': '/ng-epoch/'},
-        {'label': 'Get Started', 'id': 'getstarted', 'href': '/ng-epoch/get-started'},
-        {'label': 'Examples',    'id': 'examples',   'href': '/ng-epoch/examples'},
-        {'label': 'Options',     'id': 'options',    'href': '/ng-epoch/options'}
+        {'label': 'Home',        'id': 'home',       'href': '/'},
+        {'label': 'Get Started', 'id': 'getstarted', 'href': 'get-started'},
+        {'label': 'Examples',    'id': 'examples',   'href': 'examples'},
+        {'label': 'Options',     'id': 'options',    'href': 'options'}
       ]
     };
   }
