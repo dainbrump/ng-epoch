@@ -22,22 +22,22 @@ nge.config(['$stateProvider', '$urlRouterProvider',
       .state('/', {
         url: '/',
         controller:'HomeCtrl',
-        templateUrl:'/js/app/views/home.html'
+        templateUrl:'/ng-epoch/js/app/views/home.html'
       })
       .state('get-started', {
         url: '/get-started',
         controller:'GetStartedCtrl',
-        templateUrl:'/js/app/views/get-started.html'
+        templateUrl:'/ng-epoch/js/app/views/get-started.html'
       })
       .state('examples', {
         url: '/examples',
         controller:'ExamplesCtrl',
-        templateUrl:'/js/app/views/examples.html'
+        templateUrl:'/ng-epoch/js/app/views/examples.html'
       })
       .state('options', {
         url: '/options',
         controller:'OptionsCtrl',
-        templateUrl:'/js/app/views/options.html'
+        templateUrl:'/ng-epoch/js/app/views/options.html'
       });
   }
 ]);
