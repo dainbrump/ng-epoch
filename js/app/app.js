@@ -20,22 +20,22 @@ nge.config(['$stateProvider', '$urlRouterProvider',
     $urlRouterProvider.otherwise('/');
     $stateProvider
       .state('/', {
-        url: '/',
+        url: '/ng-epoch/',
         controller:'HomeCtrl',
         templateUrl:'/ng-epoch/js/app/views/home.html'
       })
       .state('get-started', {
-        url: '/get-started',
+        url: '/ng-epoch/get-started',
         controller:'GetStartedCtrl',
         templateUrl:'/ng-epoch/js/app/views/get-started.html'
       })
       .state('examples', {
-        url: '/examples',
+        url: '/ng-epoch/examples',
         controller:'ExamplesCtrl',
         templateUrl:'/ng-epoch/js/app/views/examples.html'
       })
       .state('options', {
-        url: '/options',
+        url: '/ng-epoch/options',
         controller:'OptionsCtrl',
         templateUrl:'/ng-epoch/js/app/views/options.html'
       });
@@ -51,10 +51,10 @@ nge.controller('PageCtrl', ['$scope', 'config',
     $scope.navbar = {
       collapse: true,
       menu: [
-        {'label': 'Home',        'id': 'home',       'href': '/'},
-        {'label': 'Get Started', 'id': 'getstarted', 'href': 'get-started'},
-        {'label': 'Examples',    'id': 'examples',   'href': 'examples'},
-        {'label': 'Options',     'id': 'options',    'href': 'options'}
+        {'label': 'Home',        'id': 'home',       'href': '/ng-epoch/'},
+        {'label': 'Get Started', 'id': 'getstarted', 'href': '/ng-epoch/get-started'},
+        {'label': 'Examples',    'id': 'examples',   'href': '/ng-epoch/examples'},
+        {'label': 'Options',     'id': 'options',    'href': '/ng-epoch/options'}
       ]
     };
   }
