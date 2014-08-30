@@ -68,7 +68,7 @@
         this.layers = layers;
         this.timestamp = ((new Date()).getTime() / 1000)|0;
     };
-    
+
     window.normal = function() {
         var U = Math.random(),
             V = Math.random();

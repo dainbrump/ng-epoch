@@ -1,0 +1,16 @@
+body {
+  margin-top: 80px;
+}
+
+.tip { text-decoration: underline; }
+
+.nav, .pagination, .carousel, .panel-title a, .tip { cursor: pointer; }
+
+.showcase {
+  margin-top: -15px;
+  width: 100%;
+  min-height: 250px;
+  background-color: #F1F1F1;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #CCC;
+}

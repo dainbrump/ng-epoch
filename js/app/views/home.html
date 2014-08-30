@@ -1,0 +1,75 @@
+      <div class="showcase">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9">
+              <h2>Ng-Epoch <small><span class="special">Simple charting for AngularJS</span></small></h2>
+              <p class="lead">
+                NG-Epoch is a set of directives wrapping the Epoch jQuery plugin.
+                Install the directive and plugin, place a tag in your HTML, and
+                feed it data. Look what made the following pie chart:
+              </p>
+              <panel type="primary">
+                <panel-body>
+                  &lt;epoch-pie chart-height="240" chart-width="240" chart-data="[{label:'A',value:10},{label:'B',value:20},{label:'C',value:40},{label:'D',value:30}]"&gt;&lt;/epoch-pie&gt;
+                </panel-body>
+              </panel>
+            </div>
+            <div class="col-md-3">
+              <epoch-pie chart-class="category10" chart-height="240" chart-width="240" chart-data="[{label:'A',value:10},{label:'B',value:20},{label:'C',value:40},{label:'D',value:30}]"></epoch-pie>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <panel title="Easy to implement" type="primary"><panel-body>
+              <p>
+                Install the module, inject a single dependency to your AngularJS
+                app, place a single tag where you want the chart, and give it data.
+                It all starts with:<br /><code>bower install ng-epoch</code>
+              </p>
+            </panel-body></panel>
+          </div>
+          <div class="col-md-4">
+            <panel title="Full original plugin support" type="primary"><panel-body>
+              <p>
+                A directive has been created for each chart and graph available in
+                the original plugin. Every option is also fully supported plus a
+                few extra bells and whistles to make things easier.
+              </p>
+            </panel-body></panel>
+          </div>
+          <div class="col-md-4">
+            <panel title="Very fast and flexible" type="primary"><panel-body>
+              <p>
+                The code adds minimal weight to your app, but packs so much punch.
+                Plus, your logic is easily separated making implementation and
+                maintenance easy.
+              </p>
+            </panel-body></panel>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <ul rn-carousel rn-carousel-indicator rn-carousel-auto-slide="8" rn-carousel-pause-on-hover="true">
+              <li>
+                <epoch-area chart-height="200" chart-data="showcase.areaData" chart-axes="showcase.threeAxes"></epoch-area>
+              </li>
+              <li>
+                <epoch-bar chart-height="200" chart-data="showcase.barData" chart-axes="showcase.twoAxes"></epoch-bar>
+              </li>
+              <li>
+                <epoch-line chart-height="200" chart-data="showcase.lineData" chart-axes="showcase.threeAxes"></epoch-line>
+              </li>
+              <li>
+                <epoch-scatter chart-height="200" chart-data="showcase.scatterData" chart-axes="showcase.fourAxes"></epoch-scatter>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>

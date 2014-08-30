@@ -1,0 +1,80 @@
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Step 1. Install</h2>
+            <p>
+              Run <code>bower install ng-epoch</code> from inside your project
+              folder to install ng-epoch and its dependencies, which are AngularJS,
+              jQuery, d3, and Epoch.
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Step 2. Include</h2>
+            <alert type="danger">
+              <strong>Important:</strong> When including the libraries in your page, ensure that D3 is loaded before Epoch.
+            </alert>
+            <p>
+              In the head of your page, include the stylesheet that comes
+              with Epoch. This will provide default colors and gauge styles.
+              Instructions for customizing chart styles is available on the
+              <a href="http://fastly.github.io/epoch" target="_blank">Epoch
+              Project Site</a>.
+            </p>
+            <p>
+              <code>&lt;link rel="stylesheet" href="[BOWER_PATH]/epoch/epoch.min.css" /&gt;</code>
+            </p>
+            <p>
+              Next, add the following javascript sources to your page(s).
+              Typically, sources are included in the <code>&lt;head&gt;</code>
+              or just before the <code>&lt;/body&gt;</code> in the HTML. In
+              either case, if you do not already have jQuery and AngularJS
+              included, add them:
+            </p>
+            <p>
+              <code>&lt;script src="[BOWER_PATH]/jquery/jquery.min.js"&gt;&lt;/script&gt;</code><br />
+              <code>&lt;script src="[BOWER_PATH]/angular/angular.min.js"&gt;&lt;/script&gt;</code>
+            </p>
+            <p>
+              At some point after those two libraries are included, add the
+              following three files:
+            </p>
+            <p>
+              <code>&lt;script src="[BOWER_PATH]/d3/d3.min.js"&gt;&lt;/script&gt;</code><br />
+              <code>&lt;script src="[BOWER_PATH]/epoch/epoch.min.js"&gt;&lt;/script&gt;</code><br />
+              <code>&lt;script src="[BOWER_PATH]/ng-epoch/ng-epoch.js"&gt;&lt;/script&gt;</code>
+            </p>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-12">
+            <h2>Step 3. Implement</h2>
+            <div class="row">
+              <div class="col-md-10">
+                <p>
+                  First, inject ng-epoch into your main AngularJS app like so:
+                  <code>angular.module('YOUR_APP', ['ng.epoch']);</code>
+                </p>
+                <p>
+                  Then inside your page, place one of the <code>&lt;epoch-????&gt;</code>
+                  tags. For example, let's make a simple pie chart that is 160x160
+                  and give it 2 values to draw.
+                </p>
+                <p>
+                  <code>&lt;epoch-pie chart-height="160" chart-width="160" chart-data="[{label:'A',value:65},{label:'B',value:35}]"&gt;&lt;/epoch-pie&gt;</code>
+                </p>
+                <p>
+                  Load your page up in a browser and you should see the following pie
+                  chart.
+                </p>
+              </div>
+              <div class="col-md-2">
+                <epoch-pie chart-height="160" chart-width="160" chart-data="[{label:'A',value:65},{label:'B',value:35}]"></epoch-pie>
+              </div>
+          </div>
+        </div>
+      </div>
+      <hr />

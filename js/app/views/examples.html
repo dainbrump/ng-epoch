@@ -1,0 +1,182 @@
+      <div class="container">
+        <accordion close-others="true">
+          <accordion-group is-open="open[0]">
+            <accordion-heading>
+              Area Graph <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open[0], 'glyphicon-chevron-right': !open[0]}"></i>
+            </accordion-heading>
+            <div class="row">
+              <div class="col-md-4">
+                <dl class="dl-horizontal">
+                  <dt>Tag:</dt>
+                  <dd>{{details.epochArea.tag}}</dd>
+                  <dt>Minimum Attrbutes:</dt>
+                  <dd>
+                    <ul class="list-unstyled">
+                      <li ng-repeat="attr in details.epochArea.requiredAtts"><span class="tip text-info" tooltip="{{details.atts[attr].short}}">{{attr}}</span></li>
+                    </ul>
+                  </dd>
+                  <dt>Optional Attributes:</dt>
+                  <dd>
+                    <ul class="list-unstyled">
+                      <li ng-repeat="attr in details.epochArea.optionalAtts"><span class="tip text-info" tooltip="{{details.atts[attr].short}}">{{attr}}</span></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+              <div class="col-md-8">
+                <p><code>&lt;epoch-area chart-height="200" chart-data="[DATA]"&gt;&lt;/epoch-area&gt;</code></p>
+                <epoch-area chart-height="200" chart-data="examples.areaData"></epoch-area>
+              </div>
+            </div>
+          </accordion-group>
+          <accordion-group is-open="open[1]">
+            <accordion-heading>
+              Bar Graph <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open[1], 'glyphicon-chevron-right': !open[1]}"></i>
+            </accordion-heading>
+            <div class="row">
+              <div class="col-md-4">
+                <dl class="dl-horizontal">
+                  <dt>Tag:</dt>
+                  <dd>{{details.epochBar.tag}}</dd>
+                  <dt>Minimum Attrbutes:</dt>
+                  <dd>
+                    <ul class="list-unstyled">
+                      <li ng-repeat="attr in details.epochBar.requiredAtts"><span class="tip text-info" tooltip="{{details.atts[attr].short}}">{{attr}}</span></li>
+                    </ul>
+                  </dd>
+                  <dt>Optional Attributes:</dt>
+                  <dd>
+                    <ul class="list-unstyled">
+                      <li ng-repeat="attr in details.epochBar.optionalAtts"><span class="tip text-info" tooltip="{{details.atts[attr].short}}">{{attr}}</span></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+              <div class="col-md-8">
+                <p><code>&lt;epoch-bar chart-height="200" chart-data="[DATA]" chart-axes="['left','bottom']"&gt;&lt;/epoch-bar&gt;</code></p>
+                <epoch-bar chart-height="200" chart-data="examples.barData" chart-axes="examples.twoAxes"></epoch-bar>
+              </div>
+            </div>
+          </accordion-group>
+          <accordion-group is-open="open[2]">
+            <accordion-heading>
+              Line Graph <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open[2], 'glyphicon-chevron-right': !open[2]}"></i>
+            </accordion-heading>
+            <div class="row">
+              <div class="col-md-4">
+                <dl class="dl-horizontal">
+                  <dt>Tag:</dt>
+                  <dd>{{details.epochLine.tag}}</dd>
+                  <dt>Minimum Attrbutes:</dt>
+                  <dd>
+                    <ul class="list-unstyled">
+                      <li ng-repeat="attr in details.epochLine.requiredAtts"><span class="tip text-info" tooltip="{{details.atts[attr].short}}">{{attr}}</span></li>
+                    </ul>
+                  </dd>
+                  <dt>Optional Attributes:</dt>
+                  <dd>
+                    <ul class="list-unstyled">
+                      <li ng-repeat="attr in details.epochLine.optionalAtts"><span class="tip text-info" tooltip="{{details.atts[attr].short}}">{{attr}}</span></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+              <div class="col-md-8">
+                <p><code>&lt;epoch-line chart-height="200" chart-data="[DATA]" chart-axes="['left','bottom','right']"&gt;&lt;/epoch-line&gt;</code></p>
+                <epoch-line chart-height="200" chart-data="examples.lineData" chart-axes="examples.threeAxes"></epoch-line>
+              </div>
+            </div>
+          </accordion-group>
+          <accordion-group is-open="open[3]">
+            <accordion-heading>
+              Pie / Donut Chart <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open[3], 'glyphicon-chevron-right': !open[3]}"></i>
+            </accordion-heading>
+            <div class="row">
+              <div class="col-md-4">
+                <dl class="dl-horizontal">
+                  <dt>Tag:</dt>
+                  <dd>{{details.epochPie.tag}}</dd>
+                  <dt>Minimum Attrbutes:</dt>
+                  <dd>
+                    <ul class="list-unstyled">
+                      <li ng-repeat="attr in details.epochPie.requiredAtts"><span class="tip text-info" tooltip="{{details.atts[attr].short}}">{{attr}}</span></li>
+                    </ul>
+                  </dd>
+                  <dt>Optional Attributes:</dt>
+                  <dd>
+                    <ul class="list-unstyled">
+                      <li ng-repeat="attr in details.epochPie.optionalAtts"><span class="tip text-info" tooltip="{{details.atts[attr].short}}">{{attr}}</span></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+              <div class="col-md-4">
+                <p><code>&lt;epoch-pie chart-height="200" chart-width="200" chart-data="[DATA]"&gt;&lt;/epoch-pie&gt;</code></p>
+                <epoch-pie chart-height="200" chart-width="200" chart-data="examples.pieData"></epoch-pie>
+              </div>
+              <div class="col-md-4">
+                <p><code>&lt;epoch-pie chart-height="200" chart-width="200" chart-data="[DATA]" chart-inner="25"&gt;&lt;/epoch-pie&gt;</code></p>
+                <epoch-pie chart-height="200" chart-width="200" chart-data="examples.pieData" chart-inner="25"></epoch-pie>
+              </div>
+            </div>
+          </accordion-group>
+          <accordion-group is-open="open[4]">
+            <accordion-heading>
+              Scatter Graph <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open[4], 'glyphicon-chevron-right': !open[4]}"></i>
+            </accordion-heading>
+            <div class="row">
+              <div class="col-md-4">
+                <dl class="dl-horizontal">
+                  <dt>Tag:</dt>
+                  <dd>{{details.epochScatter.tag}}</dd>
+                  <dt>Minimum Attrbutes:</dt>
+                  <dd>
+                    <ul class="list-unstyled">
+                      <li ng-repeat="attr in details.epochScatter.requiredAtts"><span class="tip text-info" tooltip="{{details.atts[attr].short}}">{{attr}}</span></li>
+                    </ul>
+                  </dd>
+                  <dt>Optional Attributes:</dt>
+                  <dd>
+                    <ul class="list-unstyled">
+                      <li ng-repeat="attr in details.epochScatter.optionalAtts"><span class="tip text-info" tooltip="{{details.atts[attr].short}}">{{attr}}</span></li>
+                    </ul>
+                  </dd>
+                </dl>
+              </div>
+              <div class="col-md-8">
+                <p><code>&lt;epoch-scatter chart-height="200" chart-data="[DATA]" chart-axes="['left','bottom','right','top']"&gt;&lt;/epoch-scatter&gt;</code></p>
+                <epoch-scatter chart-height="200" chart-data="examples.scatterData" chart-axes="examples.fourAxes"></epoch-scatter>
+                <p><code>&lt;epoch-scatter chart-height="200" chart-data="[DATA]" chart-axes="['left','bottom','right','top']"&gt;&lt;/epoch-scatter&gt;</code></p>
+                <epoch-scatter chart-height="200" chart-data="examples.bubbleData" chart-axes="examples.fourAxes"></epoch-scatter>
+                <p>The key difference between the first and second graphs is in the data. There is an extra value which defines the size of the dot.</p>
+              </div>
+            </div>
+          </accordion-group>
+          <!-- <accordion-group is-open="open[5]">
+            <accordion-heading>
+              <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': open[5], 'glyphicon-chevron-right': !open[5]}"></i>
+            </accordion-heading>
+            <div class="row">
+              <div class="col-md-4">
+
+              </div>
+              <div class="col-md-">
+
+              </div>
+            </div>
+          </accordion-group> -->
+
+          <!-- <h4>Realtime Area</h4>
+          <epoch-live-area chart-class="category10" chart-height="200" chart-data="realtimeArea" chart-stream="realtimeAreaFeed" chart-axes="areaAxes"></epoch-live-area>
+          <h4>Realtime Bar</h4>
+          <epoch-live-bar chart-class="category10" chart-height="200" chart-data="realtimeBar" chart-stream="realtimeBarFeed" chart-axes="barAxes"></epoch-live-bar>
+          <h4>Gauge</h4>
+          <epoch-gauge gauge-value="gauge" gauge-stream="gaugeFeed"></epoch-gauge>
+          <h4>Realtime Line</h4>
+          <epoch-live-line chart-class="category10" chart-height="200" chart-data="realtimeLine" chart-stream="realtimeLineFeed" chart-axes="areaAxes"></epoch-live-line>
+          <h4>Heatmap</h4>
+          <epoch-heatmap chart-height="200" chart-data="heatmap" chart-stream="heatmapFeed" chart-window-size="hmWindowSize" chart-buckets="hmBuckets" chart-bucket-range="hmBucketRange" chart-opacity="hmOpacity"></epoch-heatmap> -->
+
+        </accordion>
+      </div>
+      <hr />
