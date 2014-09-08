@@ -78,8 +78,8 @@ general order.
 
 Now for the fun part... create a chart. Unfortunately, I haven't gotten this far
 in documenting this little gem. I will update this readme when I have a little
-more time. In the meantime, I will refer you to the testpage.html under the
-example directory and say "Good luck. Kirk, out."
+more time. I am also working on a gh-pages. In the meantime, I will refer you
+to the testpage.html under the example directory and say "Good luck. Kirk, out."
 
 ### Copyright / Legal
 
