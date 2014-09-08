@@ -68,10 +68,10 @@
       return $scope.me;
     };
     $scope.$watch('chartStream', function (newVal) {
-      if (newVal) { $scope.me.push(scope.chartStream); }
+      if (newVal) { $scope.me.push($scope.chartStream); }
     }, true);
     $scope.$watch('gaugeStream', function (newVal) {
-      if (newVal) { $scope.me.update(scope.gaugeStream); }
+      if (newVal) { $scope.me.update($scope.gaugeStream); }
     }, true);
   });
 

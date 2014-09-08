@@ -1,6 +1,6 @@
 {
   "name": "ng-epoch",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "ng-epoch.js",
   "description": "Angular directive wrapper for EpochJS, a charting plugin by Fastly.",
   "ignore": [
