@@ -122,6 +122,7 @@ aeTest.controller('chartController', ['$scope', '$timeout',
     $timeout($scope.getNextLiveBar, 1000);
     // Realtime Line
     $scope.realtimeLine = liveLineData.history();
+    console.log($scope.realtimeLine);
     $scope.realtimeLineFeed = liveLineData.next();
     $scope.getNextLiveLine = function() {
       $scope.realtimeLineFeed = liveLineData.next();
