@@ -90,7 +90,7 @@
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'time.area';
-      var liveArea = $scope.renderEpoch(elem, options);
+      var liveArea = scope.renderEpoch(elem, options);
     };
     return angular.extend(angular.copy(baseDirective), {link: liveAreaFunction});
   });
@@ -110,7 +110,7 @@
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'time.bar';
-      var liveBar = $scope.renderEpoch(elem, options);
+      var liveBar = scope.renderEpoch(elem, options);
     };
     return angular.extend(angular.copy(baseDirective), {link: liveBarFunction});
   });
@@ -130,7 +130,7 @@
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'time.line';
-      var liveLine = $scope.renderEpoch(elem, options);
+      var liveLine = scope.renderEpoch(elem, options);
     };
     return angular.extend(angular.copy(baseDirective), {link: liveLineFunction});
   });
@@ -162,7 +162,7 @@
       elem.addClass(gClass);
       var options = scope.filterOptions();
       options.type = 'time.gauge';
-      var gauge = $scope.renderEpoch(elem, options);
+      var gauge = scope.renderEpoch(elem, options);
     };
     return angular.extend(angular.copy(baseDirective), {link: gaugeFunction});
   });
@@ -172,7 +172,7 @@
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'time.heatmap';
-      var heatmap = $scope.renderEpoch(elem, options);
+      var heatmap = scope.renderEpoch(elem, options);
     };
     return angular.extend(angular.copy(baseDirective), {link: heatmapFunction});
   });
