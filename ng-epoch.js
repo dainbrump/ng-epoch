@@ -75,87 +75,95 @@
     }, true);
   });
 
-  ngEpoch.directive('epochArea', function () {
+  ngEpoch.directive('epochArea', function ($compile) {
     var areaFunction = function (scope, elem, attr) {
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'area';
       elem.epoch(options);
+      $compile(elem)(scope);
     };
     return angular.extend(angular.copy(baseDirective), {link: areaFunction});
   });
 
-  ngEpoch.directive('epochLiveArea', function ($timeout) {
+  ngEpoch.directive('epochLiveArea', function ($compile) {
     var liveAreaFunction = function (scope, elem, attr) {
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'time.area';
       var liveArea = scope.renderEpoch(elem, options);
+      $compile(liveArea)(scope);
     };
     return angular.extend(angular.copy(baseDirective), {link: liveAreaFunction});
   });
 
-  ngEpoch.directive('epochBar', function () {
+  ngEpoch.directive('epochBar', function ($compile) {
     var barFunction = function (scope, elem, attr) {
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'bar';
       elem.epoch(options);
+      $compile(elem)(scope);
     };
     return angular.extend(angular.copy(baseDirective), {link: barFunction});
   });
 
-  ngEpoch.directive('epochLiveBar', function () {
+  ngEpoch.directive('epochLiveBar', function ($compile) {
     var liveBarFunction = function (scope, elem, attr) {
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'time.bar';
       var liveBar = scope.renderEpoch(elem, options);
+      $compile(liveBar)(scope);
     };
     return angular.extend(angular.copy(baseDirective), {link: liveBarFunction});
   });
 
-  ngEpoch.directive('epochLine', function () {
+  ngEpoch.directive('epochLine', function ($compile) {
     var lineFunction = function (scope, elem, attr) {
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'line';
       elem.epoch(options);
+      $compile(elem)(scope);
     };
     return angular.extend(angular.copy(baseDirective), {link: lineFunction});
   });
 
-  ngEpoch.directive('epochLiveLine', function () {
+  ngEpoch.directive('epochLiveLine', function ($compile) {
     var liveLineFunction = function (scope, elem, attr) {
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'time.line';
       var liveLine = scope.renderEpoch(elem, options);
+      $compile(liveLine)(scope);
     };
     return angular.extend(angular.copy(baseDirective), {link: liveLineFunction});
   });
 
-  ngEpoch.directive('epochPie', function () {
+  ngEpoch.directive('epochPie', function ($compile) {
     var pieFunction = function (scope, elem, attr) {
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'pie';
       elem.epoch(options);
+      $compile(elem)(scope);
     };
     return angular.extend(angular.copy(baseDirective), {link: pieFunction});
   });
 
-  ngEpoch.directive('epochScatter', function () {
+  ngEpoch.directive('epochScatter', function ($compile) {
     var linkFunction = function (scope, elem, attr) {
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'scatter';
       elem.epoch(options);
+      $compile(elem)(scope);
     };
     return angular.extend(angular.copy(baseDirective), {link: linkFunction});
   });
 
-  ngEpoch.directive('epochGauge', function () {
+  ngEpoch.directive('epochGauge', function ($compile) {
     var gaugeFunction = function (scope, elem, attr) {
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var gClass = (scope.gaugeDialSize) ? scope.gaugeDialSize : 'gauge-small';
@@ -163,16 +171,18 @@
       var options = scope.filterOptions();
       options.type = 'time.gauge';
       var gauge = scope.renderEpoch(elem, options);
+      $compile(gauge)(scope);
     };
     return angular.extend(angular.copy(baseDirective), {link: gaugeFunction});
   });
 
-  ngEpoch.directive('epochHeatmap', function () {
+  ngEpoch.directive('epochHeatmap', function ($compile) {
     var heatmapFunction = function (scope, elem, attr) {
       if (scope.chartClass) { elem.addClass(scope.chartClass); }
       var options = scope.filterOptions();
       options.type = 'time.heatmap';
       var heatmap = scope.renderEpoch(elem, options);
+      $compile(heatmap)(scope);
     };
     return angular.extend(angular.copy(baseDirective), {link: heatmapFunction});
   });
