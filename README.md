@@ -26,6 +26,7 @@ your project. Those dependencies are:
 
 * [AngularJS](https://angularjs.org/)
 * [d3](https://github.com/mbostock/d3)
+* [jQuery](http://jquery.com/)
 * [Epoch](https://github.com/fastly/epoch)
 
 **Important:** When including the libraries in your page, ensure that D3 is
@@ -55,9 +56,10 @@ chart styles is available on the [Epoch Project Site](http://fastly.github.io/ep
 
 Then, where you load your javascript sources, add the following sources.
 
-If you do not already have AngularJS included:
+If you do not already have jQuery and AngularJS included:
 
 ```html
+<script src="[PATH_TO_BOWER_COMPNENTS]/jquery/dist/jquery.min.js"></script>
 <script src="[PATH_TO_BOWER_COMPNENTS]/angular/angular.min.js"></script>
 ```
 
