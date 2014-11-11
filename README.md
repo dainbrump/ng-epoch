@@ -1,10 +1,10 @@
 ## ng-epoch
 
-... is an AngularJS directive wrapper for the [Epoch](https://github.com/fastly/epoch)
-jQuery plugin. The creation of this set of directives stemmed from the need for
-a simple set of charts where each chart could have data fed to it via AngularJS.
-I first looked for a decent charting module for Angular and couldn't find one
-that satisfied the client needs. That's when I stumbled upon Epoch.
+... is an AngularJS directive wrapper for the [Epoch](https://github.com/fastly/epoch).
+The creation of this set of directives stemmed from the need for a simple set of
+charts where each chart could have data fed to it via AngularJS. I first looked
+for a decent charting module for Angular and couldn't find one that satisfied the
+client needs. That's when I stumbled upon Epoch.
 
 ### Requirements
 
@@ -25,7 +25,6 @@ This will download the latest version of ng-epoch and it's dependencies into
 your project. Those dependencies are:
 
 * [AngularJS](https://angularjs.org/)
-* [jQuery](http://jquery.com/)
 * [d3](https://github.com/mbostock/d3)
 * [Epoch](https://github.com/fastly/epoch)
 
@@ -56,10 +55,9 @@ chart styles is available on the [Epoch Project Site](http://fastly.github.io/ep
 
 Then, where you load your javascript sources, add the following sources.
 
-If you do not already have jQuery and AngularJS included:
+If you do not already have AngularJS included:
 
 ```html
-<script src="[PATH_TO_BOWER_COMPNENTS]/jquery/jquery.min.js"></script>
 <script src="[PATH_TO_BOWER_COMPNENTS]/angular/angular.min.js"></script>
 ```
 
@@ -90,5 +88,4 @@ In regards to the ng-epoch source, I'm keeping it kindergarten.
 
 * If you like it, use it.
 * If you don't like it, don't use it.
-* If you make improvements, share please.
-
+* If you make or have suggestions for improvements, share please.
