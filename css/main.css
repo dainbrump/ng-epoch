@@ -2,8 +2,6 @@ body {
   margin-top: 80px;
 }
 
-.tip { text-decoration: underline; }
-
 .nav, .pagination, .carousel, .panel-title a, .tip { cursor: pointer; }
 
 .showcase {
@@ -13,4 +11,12 @@ body {
   background-color: #F1F1F1;
   margin-bottom: 20px;
   border-bottom: 1px solid #CCC;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-content>.tab-pane {
+  padding-top: 10px;
 }

@@ -3,9 +3,7 @@
 nge.service('OptionsObject', function() {
   var extendAttrs = function (src, more) {
     var a = angular.copy(src);
-    angular.forEach(more, function(v) {
-      this.push(v);
-    }, a);
+    angular.forEach(more, function(v) { this.push(v); }, a);
     return a;
   };
   var commonStatic = ['chart-axes','chart-ticks','chart-tick-formats','chart-domain','chart-range','chart-margins'];
@@ -165,6 +163,31 @@ nge.service('OptionsObject', function() {
       tag: '<epoch-scatter></epoch-scatter>',
       requiredAtts: ['chart-height','chart-data'],
       optionalAtts: extendAttrs(commonStatic, ['chart-width', 'chart-radius'])
+    },
+    epochLiveArea: {
+      tag: '<epoch-live-area></epoch-live-area>',
+      requiredAtts: ['chart-height','chart-data'],
+      optionalAtts: extendAttrs(commonStatic, extendAttrs(commonRealtime, ['chart-width', 'chart-radius']))
+    },
+    epochLiveBar: {
+      tag: '<epoch-live-bar></epoch-live-bar>',
+      requiredAtts: ['chart-height','chart-data'],
+      optionalAtts: extendAttrs(commonStatic, extendAttrs(commonRealtime, ['chart-width', 'chart-radius']))
+    },
+    epochLiveLine: {
+      tag: '<epoch-live-line></epoch-live-line>',
+      requiredAtts: ['chart-height','chart-data'],
+      optionalAtts: extendAttrs(commonStatic, extendAttrs(commonRealtime, ['chart-width', 'chart-radius']))
+    },
+    epochGauge: {
+      tag: '<epoch-gauge></epoch-gauge>',
+      requiredAtts: ['chart-height','chart-data'],
+      optionalAtts: extendAttrs(commonStatic, extendAttrs(commonRealtime, ['chart-width', 'chart-radius']))
+    },
+    epochHeatmap: {
+      tag: '<epoch-heatmap></epoch-heatmap>',
+      requiredAtts: ['chart-height','chart-data'],
+      optionalAtts: extendAttrs(commonStatic, extendAttrs(commonRealtime, ['chart-width', 'chart-radius']))
     }
   };
   return options;

@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{page.title}}</title>
-    <base href="http://dainbrump.github.io/ng-epoch/"
+
+    <!-- <base href="http://dainbrump.github.io/ng-epoch/"> -->
     <meta name="description" content="{{page.description}}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto+Condensed:700|Open+Sans:400" rel="stylesheet" type="text/css" />
@@ -19,7 +20,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" ng-click="navbar.collapse = !navbar.collapse">
@@ -28,11 +29,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/ng-epoch/"><strong>NG-Epoch</strong></a>
+
+          <!-- <a class="navbar-brand" href="/ng-epoch"><strong>NG-Epoch</strong></a> -->
+          <a class="navbar-brand" href="/"><strong>NG-Epoch</strong></a>
         </div>
         <div class="navbar-collapse collapse" collapse="navbar.collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li ui-sref-active="active" ng-repeat="nav in navbar.menu">
+            <li ng-click="navbar.collapse = !navbar.collapse" ui-sref-active="active" ng-repeat="nav in navbar.menu">
               <a href ui-sref="{{ nav.href }}">{{ nav.label }}</a>
             </li>
           </ul>
@@ -44,6 +47,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-resource.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-touch.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-sanitize.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
     <script src="js/vendor/ui-bootstrap-tpls-0.11.0.min.js"></script>
     <script src="js/vendor/requestAnimationFrame.js"></script>

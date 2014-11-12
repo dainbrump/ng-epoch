@@ -14,14 +14,31 @@ uiExtras.directive('panel', function() {
   var pLink = function (scope, el) {
     el.addClass('panel');
     el.addClass('panel-' + ((scope.type) ? scope.type : 'default'));
+    var setTitle = function (title) {
+      if (!angular.element(el.children()[0]).hasClass('panel-heading')) {
+        el.prepend(angular.element('<div class="panel-heading"></div>'));
+      }
+      if (!angular.element(el.children()[0]).children()[0]) {
+        angular.element(el.children()[0]).prepend('<h3 class="panel-title"></h3>');
+      }
+      angular.element(angular.element(el.children()[0]).children()[0]).text(title);
+    };
+    if (scope.title) {
+      setTitle(scope.title);
+    }
     scope.$watch('title', function () {
       if (scope.title) {
-        var heading = angular.element('<div class="panel-heading"><h3 class="panel-title">'+scope.title+'</h3></div>');
-        el.prepend(heading);
+        setTitle(scope.title);
       }
     });
   };
   return angular.extend(angular.copy(basePanel), {scope: pScope, link: pLink});
+});
+
+uiExtras.directive('panelTitle', function() {
+  var ptBase = angular.copy(basePanel);
+  ptBase.template = '<div class="panel-heading"><h3 class="panel-title" ng-transclude></h3></div>';
+  return angular.extend(ptBase, {link: function (scope, el, att) {}});
 });
 
 uiExtras.directive('panelBody', function() {
