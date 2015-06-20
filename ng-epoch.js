@@ -51,6 +51,14 @@
     $scope.me;
     $scope.filterOptions = function () {
       var results = {};
+
+      // copy options first
+      if ($scope.options) {
+        angular.forEach($scope.options, function (v,k) {
+          this[k] = v;
+        }, results)
+      }
+      
       angular.forEach($scope, function (v, k) {
         if ( (k.indexOf('chart') === 0 || k.indexOf('gauge') === 0) &&
              (k !== 'chartClass' && k !== 'gaugeDialSize') ) {
