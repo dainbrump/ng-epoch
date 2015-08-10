@@ -82,6 +82,9 @@
     $scope.$watch('gaugeStream', function (newVal) {
       if (newVal) { $scope.me.update($scope.gaugeStream); }
     }, true);
+    $scope.$watch('chartData', function(newVal, oldVal) {
+      if (newVal != oldVal) { $scope.me.setData(newVal); }
+    }, true);
   });
 
   ngEpoch.directive('epochArea', function ($compile) {
