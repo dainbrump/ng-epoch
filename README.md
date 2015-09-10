@@ -9,7 +9,7 @@ client needs. That's when I stumbled upon Epoch.
 ### Requirements
 
 First, it should be obvious that ng-epoch will depend on [Epoch](https://github.com/fastly/epoch)
-and any of it's dependencies. Keep this in mind should you choose to install
+and any of its dependencies. Keep this in mind should you choose to install
 manually. Please read the installation instructions on the Epoch project site
 for further help. Other than that, ng-epoch only requires AngularJS 1.2+.
 
