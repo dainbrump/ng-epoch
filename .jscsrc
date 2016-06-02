@@ -1,0 +1,7 @@
+{
+   "preset": "google",
+   "validateIndentation": 2,
+   "maximumLineLength": {
+      "value": 120
+   }
+}
