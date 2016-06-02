@@ -68,12 +68,8 @@
     ec.$onChanges = function() {
       if (this.epochObj) {
         if (this.chartStream || this.gaugeStream) {
-          if (this.chartStream) {
-            this.epochObj.push(this.chartStream);
-          }
-          if (this.gaugeStream) {
-            this.epochObj.update(this.gaugeStream);
-          }
+          if (this.chartStream) { this.epochObj.push(this.chartStream); }
+          if (this.gaugeStream) { this.epochObj.update(this.gaugeStream); }
         } else {
           this.epochObj.update(this.chartData);
         }
