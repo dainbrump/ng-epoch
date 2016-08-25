@@ -130,6 +130,39 @@
       $timeout(charts.feedHeatmap, 1000);
     };
     $timeout(charts.feedHeatmap, 1000);
+
+    var odd = true;
+    charts.updateLine2 = function() {
+      charts.line2Height = Math.floor(Math.random() * (300 - 150 + 1) + 150);
+      charts.lineData2 = (function() {
+        var data = [
+            {label: 'Layer 1', values: []},
+            {label: 'Layer 2', values: []},
+            {label: 'Layer 3', values: []}
+        ];
+        var range = Math.floor(Math.random() * (300 - 256 + 1) + 256);
+        var xVal = Math.floor(Math.random() * (40 - 20 + 1) + 20);
+        for (var j = 0; j < range; j++) {
+          var x = xVal * (j / range) - 20;
+          data[0].values.push({x: x, y: Math.sin(x) * (x / 4)});
+          data[1].values.push({x: x, y: Math.cos(x) * (x / Math.PI)});
+          data[2].values.push({x: x, y: Math.sin(x) * (x / 2)});
+        }
+        return data;
+      })();
+      if (odd) {
+        charts.line2Axes = ['right','bottom'];
+      } else {
+        charts.line2Axes = ['left', 'bottom'];
+      }
+      odd = !odd;
+    };
+    charts.updateLine2();
+    charts.updatePie2 = function() {
+      //charts.pie2Height = ;
+      //charts.pie2Width = ;
+      //charts.pieData2 = ;
+    };
   };
 
   chartController.$inject = ['$timeout'];

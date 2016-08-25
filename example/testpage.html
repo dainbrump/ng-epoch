@@ -83,6 +83,21 @@
           <epoch-heatmap chart-height="200" chart-data="charts.heatmap" chart-stream="charts.heatmapFeed" chart-window-size="charts.hmWindowSize" chart-buckets="charts.hmBuckets" chart-bucket-range="charts.hmBucketRange" chart-opacity="charts.hmOpacity"></epoch-heatmap>
         </div>
       </div>
+      <div class="row">
+        <div class="twelve columns">
+          <br />
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <h4>Static Line <button class="button-primary" ng-click="charts.updateLine2()">Update Chart</button></h4>
+          <epoch-line chart-height="charts.line2Height" chart-data="charts.lineData2" chart-axes="charts.line2Axes"></epoch-line>
+        </div>
+        <div class="six columns">
+          <h4>Pie Chart <button class="button-primary" ng-click="charts.updatePie2()">Update Chart</button></h4>
+          <epoch-pie chart-class="category10" chart-height="charts.pie2Height" chart-width="charts.pie2Width" chart-data="charts.pieData2"></epoch-pie>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.min.js"></script>

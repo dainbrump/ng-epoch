@@ -3,53 +3,55 @@
 
   var allOptions = {
     options: '=?',
-    chartAxes: '=',
+    chartAxes: '<',
     chartTicks: '=',
     chartTickFormats: '=',
     chartDomain: '=',
-    chartRange: '=',
-    chartMargins: '=',
-    chartMargin: '=',
-    chartInner: '=',
-    chartWidth: '=',
-    chartHeight: '=',
+    chartRange: '<',
+    chartMargins: '<',
+    chartMargin: '<',
+    chartInner: '<',
+    chartWidth: '<',
+    chartHeight: '<',
     chartData: '<',
-    chartClass: '=',
-    chartOrientation: '=',
-    chartPadding: '=',
-    chartOuterPadding: '=',
-    chartRadius: '=',
-    chartFps: '=',
-    chartFormat: '=',
-    chartWindowSize: '=',
-    chartHistorySize: '=',
-    chartQueueSize: '=',
-    chartPixelRatio: '=',
-    chartBuckets: '=',
-    chartBucketRange: '=',
-    chartBucketPadding: '=',
-    chartOpacity: '=',
-    chartPaintZeroValues: '=',
+    chartClass: '<',
+    chartOrientation: '<',
+    chartPadding: '<',
+    chartOuterPadding: '<',
+    chartRadius: '<',
+    chartFps: '<',
+    chartFormat: '<',
+    chartWindowSize: '<',
+    chartHistorySize: '<',
+    chartQueueSize: '<',
+    chartPixelRatio: '<',
+    chartBuckets: '<',
+    chartBucketRange: '<',
+    chartBucketPadding: '<',
+    chartOpacity: '<',
+    chartPaintZeroValues: '<',
     chartStream: '<?',
     gaugeValue: '=',
-    gaugeDialSize: '=',
-    gaugeFormat: '=',
+    gaugeDialSize: '<',
+    gaugeFormat: '<',
     gaugeStream: '<?'
   };
 
   var EpochController = function($scope, $element) {
     this.options = this.options || {};
-    this.renderEpoch = function() {
+    this.renderEpoch = function(options) {
       var container = angular.element($element[0].childNodes[0]);
-      var type = $element[0].nodeName.toLowerCase().replace('epoch-', '').replace('live-', 'time.');
-      this.options.type = (type === 'gauge' || type === 'heatmap') ? 'time.' + type : type;
-      if (this.chartClass) {
-        container.addClass(this.chartClass);
+      if (!options) {
+        var type = $element[0].nodeName.toLowerCase().replace('epoch-', '').replace('live-', 'time.');
+        this.options.type = (type === 'gauge' || type === 'heatmap') ? 'time.' + type : type;
+        if (this.chartClass) {
+          container.addClass(this.chartClass);
+        }
+        if (this.options.type === 'time.gauge') {
+          container.addClass(this.gaugeDialSize || 'gauge-small');
+        }
       }
-      if (this.options.type === 'time.gauge') {
-        container.addClass(this.gaugeDialSize || 'gauge-small');
-      }
-      this.epochObj = container.epoch(this.options);
+      this.epochObj = container.epoch(options || this.options);
     };
     this.filterOptions = function() {
       angular.forEach(this, function(v, k) {
@@ -66,6 +68,8 @@
           if (this.chartStream) { this.epochObj.push(this.chartStream); }
           if (this.gaugeStream) { this.epochObj.update(this.gaugeStream); }
         } else {
+          this.filterOptions();
+          this.renderEpoch(this.options);
           this.epochObj.update(this.chartData);
         }
       }
